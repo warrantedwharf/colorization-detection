@@ -97,14 +97,14 @@ def hist_dist():
         
 #real images
 
-path = '/home/btechcsabel/creal10k/*.jpeg' #set path accordingly
+path = 'D:/Users/Abel/Documents/ocv/colorized/creal10k/*.jpeg' #set path accordingly
 
 #distribution of real images
 hd,sd,dd,bd = hist_dist()
 
 #fake images
 
-path = '/home/btechcsabel/ctest10k/*.png' #set path accordingly
+path = 'D:/Users/Abel/Documents/ocv/colorized/ctest10k/*.png' #set path accordingly
 
 #distribution of fake images
 fhd,fsd,fdd,fbd = hist_dist()
