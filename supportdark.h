@@ -19,7 +19,7 @@ public:
 
 public:
 	bool InitProc(int width, int height, int nChannels);
-	bool Process(const unsigned char* indata, unsigned char* outdata, int width, int height, int nChannels);
+	bool Process(const unsigned char* indata, unsigned char* outdata, unsigned char* outdatb, int width, int height, int nChannels);
 
 private:
 	int rows;
@@ -28,9 +28,9 @@ private:
 
 };
 
-void get_dark_channel(const cv::Mat *p_src, std::vector<Pixel> &tmp_vec, int rows, int cols, int channels, int radius,  cv::Mat *p_dark);
+void get_dark_channel(const cv::Mat *p_src, std::vector<Pixel> &tmp_vec, int rows, int cols, int channels, int radius,  cv::Mat *p_dark, cv::Mat *p_bright);
 
-void assign_data(unsigned char *outdata, const cv::Mat *p_dark, int rows, int cols, int channels);
+void assign_data(unsigned char *outdata, unsigned char *outdatb, const cv::Mat *p_dark, const cv::Mat *p_bright, int rows, int cols, int channels);
 
 
 
